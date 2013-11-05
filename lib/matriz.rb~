@@ -1,0 +1,34 @@
+class Matriz
+  
+  def initialize(m, n)
+      @nfil = m
+      @ncol = n
+      
+      for i in (0...@nfil) do
+	for j in (0...@ncol) do
+	  self[i][j] = new0
+	end	
+      end
+  end
+  
+  def show
+          for i in (0...@nfil) do
+	    for j in (0...@ncol) do
+	    puts  self[i][j]
+	    end	
+	end
+  end
+  
+  def compare_zero
+    aux = 1
+     for i in (0...@nfil) do
+	for j in (0...@ncol) do
+	  if (self[i][j] != 0)
+	      aux = 0
+	  end
+	end	
+      end
+    aux
+end
+
+end
